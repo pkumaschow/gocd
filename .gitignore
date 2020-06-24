@@ -5,5 +5,8 @@
 *.iml
 /venv/
 
+/home
+/godata
+
 /config-before.xml
 /config-after.xml
