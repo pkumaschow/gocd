@@ -1,0 +1,30 @@
+version: "3.3"
+services:
+    server:
+      hostname: gocd
+      privileged: false
+      build: .
+      ports: 
+        - 8153:8153
+      volumes:
+        - ./godata:/godata:rw
+        - ./home:/home/go:rw
+      environment:
+        SOME_VAR: 1
+      networks:
+        - gocdnet
+    agent:
+      image: gocd/gocd-agent-alpine-3.9:v20.5.0
+      depends_on:
+        - server
+      environment:
+        GO_SERVER_URL: http://server:8153/go
+        AGENT_AUTO_REGISTER_KEY: c651300a-d9d3-4795-b8a1-ea7667da60d5
+        #AGENT_AUTO_REGISTER_ENVIRONMENTS: 
+        AGENT_AUTO_REGISTER_HOSTNAME: docker-agent
+      networks:
+        - gocdnet
+
+networks:
+  gocdnet:
+    driver: bridge

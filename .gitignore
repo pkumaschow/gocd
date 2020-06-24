@@ -1,0 +1,9 @@
+# Compiled python modules.
+*.pyc
+
+/.idea
+*.iml
+/venv/
+
+/config-before.xml
+/config-after.xml
