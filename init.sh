@@ -1,7 +1,5 @@
 #!/bin/env bash
 
-mkdir godata home
-
 if [ -f "requirements.txt" ]; then
     if [ ! -d "venv" ]; then
         virtualenv --python=python2.7 venv
