@@ -19,7 +19,7 @@ services:
         - server
       environment:
         GO_SERVER_URL: http://server:8153/go
-        AGENT_AUTO_REGISTER_KEY: c651300a-d9d3-4795-b8a1-ea7667da60d5
+        AGENT_AUTO_REGISTER_KEY: 9561ba37-fbe9-41df-9013-d0b45c51dc4e
         #AGENT_AUTO_REGISTER_ENVIRONMENTS: 
         AGENT_AUTO_REGISTER_HOSTNAME: docker-agent
       networks:

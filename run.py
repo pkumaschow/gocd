@@ -1,4 +1,5 @@
-#!bin/python
+#!venv/bin/python
+
 from gomatic import *
 
 #configurator = GoCdConfigurator(HostRestClient("localhost:8153", ssl=False, username='admin', password='abc123'))
