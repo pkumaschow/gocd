@@ -22,7 +22,7 @@ GoCD can be accessed one of two ways.
 http://localhost:8153
 ```
 
-or 
+or if you dnsmasq to point the domain dev.local to your localhost:
 
 ```bash
 https://gocd.dev.local
