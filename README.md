@@ -33,7 +33,7 @@ http://localhost:8153
 or 
 
 ```bash
-https:\\gocd.dev.local
+https://gocd.dev.local
 ```
 
 
