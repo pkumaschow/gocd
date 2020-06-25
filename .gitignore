@@ -10,3 +10,6 @@
 
 /config-before.xml
 /config-after.xml
+
+/files/nginx/logs
+
