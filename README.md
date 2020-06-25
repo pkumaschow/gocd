@@ -1,6 +1,8 @@
 # gocd
 
-execute init.sh in the root directory and then execute source venv/bin/activate
+A local docker stack for playing with gocd.
+
+execute init.sh in the root directory and then execute source venv/bin/activate to setup your python virtual environment.
 
 
 ## Start it up
@@ -54,10 +56,13 @@ or
 https://gocd.dev.local
 ```
 
+## Requirements
 
+You will of course need the docker engine installed.
 
+Having wildcard DNS resolution for the domain `dev.local` would also be nice but you could get by without it.
 
-
+[Would you like know more about dnsmasq?](https://fedoramagazine.org/using-the-networkmanagers-dnsmasq-plugin/)
 
 
 
