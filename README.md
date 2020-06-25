@@ -12,6 +12,22 @@ docker-compose up
 ```
 This will create a gocd server, a gocd agent and an nginx reverse proxy.
 
+## Nginx and SSL
+
+Nginx is being used as a proxy a wildcard cert and private key are provided.
+
+GoCD can be accessed one of two ways.
+
+```bash
+http://localhost:8153
+```
+
+or 
+
+```bash
+https://gocd.dev.local
+```
+
 ## gocd agent
 
 The gocd agent will attempt to register itself with the gocd server.
@@ -39,22 +55,6 @@ This repo will be checked out and the files listed.
 I am using NetworkManager and dnsmasq that allows me to use wildcard hostnames in the domain name `dev.local`
 
 Basically any hostname in this domain points to localhost.
-
-## Nginx and SSL
-
-Nginx is being used as a proxy a wildcard cert and private key are provided.
-
-GoCD can be accessed one of two ways.
-
-```bash
-http://localhost:8153
-```
-
-or 
-
-```bash
-https://gocd.dev.local
-```
 
 ## Requirements
 
