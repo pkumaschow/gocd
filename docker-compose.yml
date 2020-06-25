@@ -25,6 +25,24 @@ services:
       networks:
         - gocdnet
 
+    nginx:
+      image: nginx:1.15.8-alpine
+      domainname: dev.local
+      ports:
+        - "0.0.0.0:80:80"
+        - "0.0.0.0:443:443"
+      volumes:
+        - ./files/nginx/site.conf:/etc/nginx/conf.d/site.conf:ro
+        - ./files/nginx/certs/:/etc/nginx/certs:z
+#        - ./files/nginx/logs/:/var/log/nginx/:z
+      command: [nginx-debug, '-g', 'daemon off;']
+      environment:
+        APP_DEBUG: 1
+      depends_on:
+        - server
+      networks:
+        gocdnet:
+
 networks:
   gocdnet:
     driver: bridge

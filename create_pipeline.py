@@ -2,6 +2,8 @@
 
 from gomatic import *
 
+print('\033[32m' + 'Injecting a pipeline into GoCD' + '\033[0m')  # Red text
+
 #configurator = GoCdConfigurator(HostRestClient("localhost:8153", ssl=False, username='admin', password='abc123'))
 configurator = GoCdConfigurator(HostRestClient("localhost:8153", ssl=False))
 pipeline = configurator\
