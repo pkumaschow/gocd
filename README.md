@@ -2,11 +2,29 @@
 
 execute init.sh in the root directory and then execute source venv/bin/activate
 
+
 ## Start it up
 
 ```bash
 docker-compose up
 ```
+This will create a gocd server, a gocd agent and an nginx reverse proxy.
+
+## gocd agent
+
+The gocd agent will attempt to register itself with the gocd server.
+
+You will need to edit the docker-compose.yml file and update this line with the current auto register key.
+
+```bash
+ AGENT_AUTO_REGISTER_KEY: 9561ba37-fbe9-41df-9013-d0b45c51dc4e
+ ```
+You can get the current auto register key by running the `create_pipeline.py` script.
+
+This produces to xml files, a before an after of the gocd configuration.
+
+Either of these two files will have the auto register key of your gocd server instance in the agentAutoRegisterKey attribute of the server tag.
+
 
 ## Create a pipeline
 
